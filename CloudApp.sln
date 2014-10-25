@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22129.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.API.Web", "CloudApp.API.Web\CloudApp.API.Web.csproj", "{158039B6-5BD6-4677-9F83-842E17CAC81C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{AAA749A9-31B1-4F28-AFD5-BC8D4217959D}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{93D41AD7-A709-406A-8669-38921AF2EFE2}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\CloudAppAPIWeb-WAWS-dev.json = PublishScripts\Configurations\CloudAppAPIWeb-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.API", "CloudApp.API\CloudApp.API.csproj", "{5773EF5E-65E4-40B0-9517-EA10E7A31FD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.API.Domain", "CloudApp.API.Domain\CloudApp.API.Domain.csproj", "{64C59E26-4BAA-4DF7-862B-44B118C7B81E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.ServiceBus", "CloudApp.ServiceBus\CloudApp.ServiceBus.csproj", "{520D014E-0619-42DD-91B3-E5EE072D3FB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{158039B6-5BD6-4677-9F83-842E17CAC81C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158039B6-5BD6-4677-9F83-842E17CAC81C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158039B6-5BD6-4677-9F83-842E17CAC81C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158039B6-5BD6-4677-9F83-842E17CAC81C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5773EF5E-65E4-40B0-9517-EA10E7A31FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5773EF5E-65E4-40B0-9517-EA10E7A31FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5773EF5E-65E4-40B0-9517-EA10E7A31FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5773EF5E-65E4-40B0-9517-EA10E7A31FD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C59E26-4BAA-4DF7-862B-44B118C7B81E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C59E26-4BAA-4DF7-862B-44B118C7B81E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C59E26-4BAA-4DF7-862B-44B118C7B81E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C59E26-4BAA-4DF7-862B-44B118C7B81E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{520D014E-0619-42DD-91B3-E5EE072D3FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{520D014E-0619-42DD-91B3-E5EE072D3FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{520D014E-0619-42DD-91B3-E5EE072D3FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{520D014E-0619-42DD-91B3-E5EE072D3FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{93D41AD7-A709-406A-8669-38921AF2EFE2} = {AAA749A9-31B1-4F28-AFD5-BC8D4217959D}
+	EndGlobalSection
+EndGlobal
