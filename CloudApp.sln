@@ -1,26 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.22129.1
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.API.Web", "CloudApp.API.Web\CloudApp.API.Web.csproj", "{158039B6-5BD6-4677-9F83-842E17CAC81C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{377FA283-5A28-46AF-A3B3-D10C02F3BDD6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{AAA749A9-31B1-4F28-AFD5-BC8D4217959D}"
-	ProjectSection(SolutionItems) = preProject
-		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
-		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceBus", "ServiceBus", "{EFB91E9E-8187-4615-8749-031CA103F8FC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{93D41AD7-A709-406A-8669-38921AF2EFE2}"
-	ProjectSection(SolutionItems) = preProject
-		PublishScripts\Configurations\CloudAppAPIWeb-WAWS-dev.json = PublishScripts\Configurations\CloudAppAPIWeb-WAWS-dev.json
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceBus.Handlers", "ServiceBus.Handlers", "{FEBD9A96-8099-4063-84C5-8A8923F193EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.API", "CloudApp.API\CloudApp.API.csproj", "{5773EF5E-65E4-40B0-9517-EA10E7A31FD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.ServiceBus", "ServiceBus\CloudApp.ServiceBus\CloudApp.ServiceBus.csproj", "{520D014E-0619-42DD-91B3-E5EE072D3FB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.API.Domain", "CloudApp.API.Domain\CloudApp.API.Domain.csproj", "{64C59E26-4BAA-4DF7-862B-44B118C7B81E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.Domain", "Domain\CloudApp.Domain\CloudApp.Domain.csproj", "{D93A6E68-2444-41E5-9190-5B30B63B58C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.ServiceBus", "CloudApp.ServiceBus\CloudApp.ServiceBus.csproj", "{520D014E-0619-42DD-91B3-E5EE072D3FB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.ServiceBus.Messages", "ServiceBus\CloudApp.ServiceBus.Messages\CloudApp.ServiceBus.Messages.csproj", "{D953A379-12C1-4403-8451-B04A9CDFE67C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.ServiceBus.Handlers.Commands", "ServiceBus.Handlers\CloudApp.ServiceBus.Handlers.Commands\CloudApp.ServiceBus.Handlers.Commands.csproj", "{17766B04-FCFC-431F-ACD6-8EA982B10991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.ServiceBus.Handlers.Queries", "ServiceBus.Handlers\CloudApp.ServiceBus.Handlers.Queries\CloudApp.ServiceBus.Handlers.Queries.csproj", "{2BC11EE0-D0AD-44F3-9094-A22CE2E294BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.Web.API", "CloudApp.Web.API\CloudApp.Web.API.csproj", "{F0EE1149-3650-4416-A47A-A6A5C462AFC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudApp.Domain.Models", "Domain\CloudApp.Domain.Models\CloudApp.Domain.Models.csproj", "{84C47BCD-1995-46E0-A723-F9636F91A91E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,27 +29,44 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{158039B6-5BD6-4677-9F83-842E17CAC81C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{158039B6-5BD6-4677-9F83-842E17CAC81C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{158039B6-5BD6-4677-9F83-842E17CAC81C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{158039B6-5BD6-4677-9F83-842E17CAC81C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5773EF5E-65E4-40B0-9517-EA10E7A31FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5773EF5E-65E4-40B0-9517-EA10E7A31FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5773EF5E-65E4-40B0-9517-EA10E7A31FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5773EF5E-65E4-40B0-9517-EA10E7A31FD3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{64C59E26-4BAA-4DF7-862B-44B118C7B81E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64C59E26-4BAA-4DF7-862B-44B118C7B81E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64C59E26-4BAA-4DF7-862B-44B118C7B81E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64C59E26-4BAA-4DF7-862B-44B118C7B81E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{520D014E-0619-42DD-91B3-E5EE072D3FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{520D014E-0619-42DD-91B3-E5EE072D3FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{520D014E-0619-42DD-91B3-E5EE072D3FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{520D014E-0619-42DD-91B3-E5EE072D3FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D93A6E68-2444-41E5-9190-5B30B63B58C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D93A6E68-2444-41E5-9190-5B30B63B58C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D93A6E68-2444-41E5-9190-5B30B63B58C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D93A6E68-2444-41E5-9190-5B30B63B58C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D953A379-12C1-4403-8451-B04A9CDFE67C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D953A379-12C1-4403-8451-B04A9CDFE67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D953A379-12C1-4403-8451-B04A9CDFE67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D953A379-12C1-4403-8451-B04A9CDFE67C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17766B04-FCFC-431F-ACD6-8EA982B10991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17766B04-FCFC-431F-ACD6-8EA982B10991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17766B04-FCFC-431F-ACD6-8EA982B10991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17766B04-FCFC-431F-ACD6-8EA982B10991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC11EE0-D0AD-44F3-9094-A22CE2E294BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC11EE0-D0AD-44F3-9094-A22CE2E294BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC11EE0-D0AD-44F3-9094-A22CE2E294BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC11EE0-D0AD-44F3-9094-A22CE2E294BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0EE1149-3650-4416-A47A-A6A5C462AFC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0EE1149-3650-4416-A47A-A6A5C462AFC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0EE1149-3650-4416-A47A-A6A5C462AFC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0EE1149-3650-4416-A47A-A6A5C462AFC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C47BCD-1995-46E0-A723-F9636F91A91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C47BCD-1995-46E0-A723-F9636F91A91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C47BCD-1995-46E0-A723-F9636F91A91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C47BCD-1995-46E0-A723-F9636F91A91E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{93D41AD7-A709-406A-8669-38921AF2EFE2} = {AAA749A9-31B1-4F28-AFD5-BC8D4217959D}
+		{520D014E-0619-42DD-91B3-E5EE072D3FB7} = {EFB91E9E-8187-4615-8749-031CA103F8FC}
+		{D93A6E68-2444-41E5-9190-5B30B63B58C8} = {377FA283-5A28-46AF-A3B3-D10C02F3BDD6}
+		{D953A379-12C1-4403-8451-B04A9CDFE67C} = {EFB91E9E-8187-4615-8749-031CA103F8FC}
+		{17766B04-FCFC-431F-ACD6-8EA982B10991} = {FEBD9A96-8099-4063-84C5-8A8923F193EF}
+		{2BC11EE0-D0AD-44F3-9094-A22CE2E294BD} = {FEBD9A96-8099-4063-84C5-8A8923F193EF}
+		{84C47BCD-1995-46E0-A723-F9636F91A91E} = {377FA283-5A28-46AF-A3B3-D10C02F3BDD6}
 	EndGlobalSection
 EndGlobal
